@@ -13,7 +13,10 @@ gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-gem 'compass-rails'
+group :assets do
+	gem 'compass-rails'
+	gem 'compass'
+end
 gem 'rails_12factor'
 
 

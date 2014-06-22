@@ -22,7 +22,7 @@
 
 .masthead-wrapper {
 	background-color: #2c3e50;
-	height: 500px;
+	height: 550px;
 	width: 100%;
 	position: absolute;
 	clear: both;
@@ -60,5 +60,5 @@
 .content {
 	@include clearfix;
 	position: relative;
-	top: 550px;
+	top: 600px;
 }

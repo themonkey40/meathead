@@ -26,9 +26,7 @@
 	width: 100%;
 	position: absolute;
 	clear: both;
-	.background {
-		@include background-image(inline-image("meathead-truck1.jpg"));
-		background-size: 2048px 1536px;
+	*[class^="prlx"] {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -37,6 +35,12 @@
 		opacity: 0.3;
 	}
 }
+.prlx-1 {
+	@include background-image(inline-image("meathead-truck1.jpg"));
+	background-size: 2048px 1536px;
+	background-position: 50% 50%;
+}
+
 .heading { 
 	padding-top: 250px;
 	h1, h2, h3, h4, h5 {

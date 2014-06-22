@@ -15,14 +15,12 @@
 //= require bootstrap
 //= require_tree .
 
-$(document).ready(function(){
-	$(window).bind('scroll',function(e){
-   		parallaxScroll();
-   	});
- 
-   	function parallaxScroll(){
-   		var scrolledY = $(window).scrollTop();
-		$('.background').css('background-position','center -'+((scrolledY*1))+'px');
-   	}
- 
+$(document).ready(function() {
+    $(window).scroll(function(){
+        $('*[class^="prlx"]').each(function(r){
+            var pos = $(this).offset().top;
+            var scrolled = $(window).scrollTop();
+            $('*[class^="prlx"]').css('top', -(scrolled * 0.5) + 'px');         
+        });
+    });
 });

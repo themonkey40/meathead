@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: meathead_production
-  username: meathead
+  # username: meathead
   password: <%= ENV['MEATHEAD_DATABASE_PASSWORD'] %>

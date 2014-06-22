@@ -37,8 +37,10 @@
 }
 .prlx-1 {
 	@include background-image(inline-image("meathead-truck1.jpg"));
-	background-size: 2048px 1536px;
 	background-position: 50% 50%;
+	@media screen and (max-width: 1410px) {
+		background-size: 1536px 960px;
+	}
 }
 
 .heading { 

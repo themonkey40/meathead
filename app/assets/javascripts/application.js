@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+	$(window).bind('scroll',function(e){
+   		parallaxScroll();
+   	});
+ 
+   	function parallaxScroll(){
+   		var scrolledY = $(window).scrollTop();
+		$('.background').css('background-position','center -'+((scrolledY*1))+'px');
+   	}
+ 
+});

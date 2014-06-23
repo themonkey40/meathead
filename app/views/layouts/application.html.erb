@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'style', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite|Rock+Salt|Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="header">
@@ -23,10 +24,11 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a id='teamBtn' href="#">Menu</a></li>
-			    			<li><a id='teamBtn' href="#">Catering</a></li>
-							<li><a id='teamBtn' href="#">About Meathead</a></li>
-			    			<li><a id='contactBtn' href="#">Contact</a></li>
+							<li><a id='menuBtn' href="">Menu</a></li>
+							<li><a id='scheduleBtn' href="">Schedule</a></li>
+							<li><a id='aboutBtn' href="">About Meathead</a></li>
+			    			<li><a id='cateringBtn' href="">Catering</a></li>
+			    			<li><a id='contactBtn' href="">Contact</a></li>
 			  			</ul>
 					</div>
 				</div>
@@ -35,14 +37,15 @@
 				<div class="row">
 					<div class="col-md-12 heading">
 						<h1 class="text-center">Gourmet. Stacked. Burgers.</h1>
-						<p class="text-center">Voted Best Burgers in the World by My Mom.</p>
+						<p class="text-center"><a href="#" class="btn btn-large btn-success">Join Us</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="content">
-		<%= yield %>
-	</div>
+	<%= yield %>
+	<script type="text/javascript">
+		$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+	</script>
 </body>
 </html>

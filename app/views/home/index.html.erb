@@ -113,10 +113,28 @@
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-6">
 				<h4 class="uppercase">Catering</h4>
 				<p>If you can dream it, we can do it. Chef Daniel and his team are known for making the impossible possible. You can mix and match our menu however you wish or we can do a totally custom menu for your event. Remember, we prefer a challenge, but simpler events are welcome.</p>
-				<p>Contact <a href="mailto:devin@meatheadtruck.com">devin@meatheadtruck.com</a> or call (510) 754-0694.</p>
+				<p>Call Devin at (510) 754-0694 or shoot us a message.</p>
+			</div>
+			<div class="col-md-6">
+				<h4 class="uppercase">Tell Us About Your Event.</h4>
+				<%= form_tag('/home', method: "post") do %>
+					<div class="form-group">
+						<%= text_field_tag 'name', '', class: "form-control", placeholder: "Name" %>
+			  		</div>
+			  		<div class="form-group">
+						<%= text_field_tag 'email', '', class: "form-control", placeholder: "Email" %>
+			  		</div>
+			  		<div class="form-group">
+						<%= text_field_tag 'phone', '', class: "form-control", placeholder: "Phone" %>
+			  		</div>
+			  		<div class="form-group">
+						<%= text_area_tag 'message', '', class: "form-control", placeholder: "Message", size: "0x3" %>
+			  		</div>
+			  		<%= submit_tag 'Send Message', class: "btn btn-success btn-message" %>
+				<% end %>
 			</div>
 		</div>
 	</div>

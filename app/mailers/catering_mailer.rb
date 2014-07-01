@@ -4,7 +4,7 @@ class CateringMailer < ActionMailer::Base
   	def catering_email (email)
 		@email = email
 		delivery_options = { user_name: 'info@meatheadtruck.com', password: 'Oakland24', address: 'mail.privateemail.com' }
-		mail(to: 'daniel@meatheadtruck.com', subject: 'New Catering Request From Meatheadtruck.com', delivery_method_options: delivery_options)
+		mail(to: 'mphorton@gmail.com', subject: 'New Catering Request From Meatheadtruck.com', delivery_method_options: delivery_options)
 	end
 
 end

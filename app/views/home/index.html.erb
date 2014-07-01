@@ -129,6 +129,11 @@
 			  		<div class="form-group">
 						<%= text_area_tag 'message', '', class: "form-control", placeholder: "Message", size: "0x3" %>
 			  		</div>
+			  		<div class="form-group">
+			  			<%= label_tag 'humanizer_answer', @home.humanizer_question %>
+						<%= text_field_tag 'humanizer_answer', '', :class => "form-control" %>
+					</div>
+			  		<%= hidden_field_tag 'humanizer_question_id' %>
 			  		<%= submit_tag 'Send Message', class: "btn btn-success btn-message" %>
 				<% end %>
 			</div>
